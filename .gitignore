@@ -1,4 +1,8 @@
+#output
 books.json
+#python cache
 __pycache__/
+#log files
 *.log
+#privacy files
 .env
