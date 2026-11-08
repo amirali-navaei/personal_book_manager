@@ -29,7 +29,19 @@ display_books(books)
 number_of_books = int(input("how many books do you want to add? "))
 
 for i in range(number_of_books):
-    book = input("enter the name of a book: ")
+    book_name = input("Enter the name of a book: ")
+
+    priority = input("Enter priority (low/medium/high): ").lower()
+
+    while priority not in ["low", "medium", "high"]:
+        print("Invalid priority. Please try again.")
+        priority = input("Enter priority (low/medium/high): ").lower()
+
+    book = {
+        "name": book_name,
+        "priority": priority
+    }
+
     books.append(book)
 
 save_books(books)

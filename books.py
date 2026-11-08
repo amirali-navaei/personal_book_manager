@@ -1,8 +1,11 @@
 import json
 def display_books(books):
-    print("your books are:")
+    print("Your books are:")
     for book in books:
-        print(book)
+        if isinstance(book, dict):
+            print(f"Book: {book['name']} | Priority: {book['priority']}")
+        else:
+            print(book)
 def save_books(books):
     with open("books.json", "w") as file:
         json.dump(books, file)
