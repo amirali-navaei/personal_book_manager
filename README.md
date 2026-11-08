@@ -21,6 +21,8 @@ It also includes an Admin Mode that checks a password stored in an environment v
 - Handle missing book data files using try/except.
 - Provide an Admin Mode with password validation.
 - Read the admin password from a .env file.
+- Assign a priority level (low, medium, or high) to each book.
+- Display each book with its name and priority level.
 
 ## Requirements
 
@@ -121,10 +123,32 @@ These local files are ignored by Git.
 6. The program loads previously saved books from `books.json`.
 7. If `books.json` does not exist, an empty list is used.
 8. The program displays the existing books.
-9. The user can enter the number of new books they want to add.
-10. The program asks for each book name and adds it to the list.
-11. The updated list is saved to `books.json`.
-12. Finally, the program displays the complete book list.
+9. The user enters the number of new books they want to add.
+10. For each new book, the program asks for the book name.
+11. The program asks for a priority level (low, medium, or high).
+12. If the priority is invalid, the program asks again.
+13. Each book is stored with its name and priority.
+14. The updated book list is saved to `books.json`.
+15. Finally, the program displays the books with their priority levels.
+### Book Priority Example
+
+Each new book has a name and a priority level.
+
+The available priority levels are:
+
+- low
+- medium
+- high
+
+Example of a book stored in JSON:
+
+```json
+{
+"name": "Python Basics",
+"priority": "high"
+}
+```
+
 ## Troubleshooting
 
 ### 1. Python is not recognized
