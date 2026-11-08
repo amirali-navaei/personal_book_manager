@@ -1,9 +1,12 @@
 import json
 def display_books(books):
-    print("Your books are:")
+    print("\n===== Your Book List =====")
+
     for book in books:
         if isinstance(book, dict):
-            print(f"Book: {book['name']} | Priority: {book['priority']}")
+            print(f"Book Name: {book['name']}")
+            print(f"Priority Level: {book['priority']}")
+            print("--------------------")
         else:
             print(book)
 def save_books(books):
