@@ -10,6 +10,8 @@ This project allows users to manage their personal book list by adding, displayi
 The program stores book information in a JSON file, so the data remains available after closing and running the application again.
 
 It also includes an Admin Mode that checks a password stored in an environment variable.
+This project helps users manage their personal books and organize them by priority.
+
 
 ## Features
 
