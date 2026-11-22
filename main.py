@@ -43,6 +43,7 @@ for i in range(number_of_books):
     }
 
     books.append(book)
+    print(f"{book_name} added successfully")
 
 save_books(books)
 
