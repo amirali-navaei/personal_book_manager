@@ -1,6 +1,9 @@
 import json
 def display_books(books):
     print("\n===== Your Book List =====")
+    if not books :
+        print("no books available . please add a book")
+        return
 
     for book in books:
         if isinstance(book, dict):
